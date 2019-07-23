@@ -21,8 +21,12 @@
     "license": "MIT",
     "minimum-stability": "stable",
     "autoload": {
-        "psr-0": {
-            "HelgeSverre\\Brreg": "src/"
+        "psr-4": {
+            "HelgeSverre\\Brreg\\": "src/Services",
+            "HelgeSverre\\Brreg\\Transformers\\": "src/Transformers"
         }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.5"
     }
 }

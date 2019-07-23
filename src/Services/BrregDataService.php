@@ -11,7 +11,7 @@ use League\Fractal\Manager;
 use League\Fractal\Resource\Collection;
 use League\Fractal\Resource\Item;
 
-class BrregService
+class BrregDataService
 {
     protected $apiEndpoint = "https://data.brreg.no/enhetsregisteret/enhet/";
     protected $format = "json";

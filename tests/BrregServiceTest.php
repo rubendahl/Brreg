@@ -1,5 +1,9 @@
 <?php
 
+use PHPUnit\Framework\TestCase as TestCase;
+
+use HelgeSverre\Brreg\BrregDataService as BrregDataService;
+
 
 class BrregServiceTest extends TestCase
 {
@@ -11,7 +15,7 @@ class BrregServiceTest extends TestCase
 
     public function setUp()
     {
-        $this->service = new \App\Services\BrregDataService(
+        $this->service = new BrregDataService( //\App\Services\BrregDataService(
             new \League\Fractal\Manager(),
             new \GuzzleHttp\Client()
         );
@@ -61,7 +65,8 @@ class BrregServiceTest extends TestCase
         $this->assertArrayHasKey("registration_date", $firstCompanyInList);
         $this->assertArrayHasKey("employee_count", $firstCompanyInList);
         $this->assertArrayHasKey("bankrupt", $firstCompanyInList);
-        $this->assertArrayHasKey("address", $firstCompanyInList);
+        //echo("GOT: " . print_r($firstCompanyInList, true));
+        $this->assertArrayHasKey("visiting_address", $firstCompanyInList);
     }
 
 
