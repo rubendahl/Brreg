@@ -15,7 +15,7 @@ Install using composer:
 
 Add the service provider in `config/app.php`:
 
-    HelgeSverre\Brreg\BrregDataServiceProvider::class,
+    HelgeSverre\Brreg\Providers\BrregDataServiceProvider::class,
 
 Usage
 -----
@@ -23,7 +23,7 @@ Usage
 
 ```php
 
-Route::get("/companies", function (Request $request, \HelgeSverre\Brreg\BrregDataService $brreg) {
+Route::get("/companies", function (Request $request, \HelgeSverre\Brreg\Services\BrregDataService $brreg) {
 
     $searchTerm = $request->input("q");
     
